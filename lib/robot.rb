@@ -1,4 +1,3 @@
-require "pry"
 class Robot
 
   FACING = ["NORTH", "EAST", "SOUTH", "WEST"]

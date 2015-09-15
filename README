@@ -1,0 +1,19 @@
+1. Install required gems (minitest)
+
+    bundle install
+
+2. Run the tests
+
+    rake
+
+3a. Run the robot
+
+    ruby the_robot.rb
+
+  Issue the program at the input e.g.
+
+    PLACE 1,2,EAST MOVE MOVE LEFT MOVE REPORT
+
+3b. Run the robot (execute programs from file program1.theRobot)
+
+    ruby the_robot.rb program1.theRobot
