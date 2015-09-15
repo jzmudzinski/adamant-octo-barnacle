@@ -20,6 +20,7 @@ class Robot
   end
 
   def move
+    return false unless validate_position_on_board
     if @board.on_board?(@x + x_modifier.to_i, @y + y_modifier.to_i)
       @x += x_modifier.to_i
       @y += y_modifier.to_i
@@ -29,12 +30,12 @@ class Robot
   end
 
   def left
-    validate_position_on_board
+    return false unless validate_position_on_board
     rotate(-1)
   end
 
   def right
-    validate_position_on_board
+    return false unless validate_position_on_board
     rotate(1)
   end
 
@@ -72,7 +73,6 @@ class Robot
       to_execute << "(#{params.join(",")})"
     end
     response = eval(to_execute)
-    # response = "" if response == true
     @output << response if response && response.kind_of?(String)
   end
 
